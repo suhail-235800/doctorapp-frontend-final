@@ -1,42 +1,131 @@
-<div class="landingbody"> <nav>
-    <div class="logo">
-      <img src="\assets\logoname.png" alt="Logo">
-    </div>
-    <ul>
-      <li><a href="#" routerLink="/services" >Services</a></li>
-      <li><a href="#" routerLink="/aboutus" >About Us</a></li>
-      <li><a href="#contact" >Contact Us</a></li>
-      <li><button class="joinus-button" routerLink="/register">Join Us</button></li>
 
-    </ul>
-  </nav>
-  <div class="content-items">
+   <div class="whole">
+    <nav class="navbar">
+   <div class="container">
+ 
+     <div class="navbar-header">
+       <button class="navbar-toggler" data-toggle="open-navbar1">
+         <span></span>
+         <span></span>
+         <span></span>
+       </button>
+       <a href="#">
+         <h4>Awesome<span>logo</span></h4>
+       </a>
+     </div>
+ 
+     <div class="navbar-menu" id="open-navbar1">
+       <ul class="navbar-nav">
+         <li class="active"><a href="#">Home</a></li>
+         <li class="navbar-dropdown">
+           <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+             Services <i class="fa fa-angle-down"></i>
+           </a>
+           <ul class="dropdown" id="my-dropdown-id">
+             <li><a href="#">Actions</a></li>
+             <li><a href="#">Something else here</a></li>
+             <li class="separator"></li>
+             <li><a href="#">Seprated link</a></li>
+             <li class="separator"></li>
+             <li><a href="#">One more seprated link.</a></li>
+           </ul>
+         </li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Contact</a></li>
+         <li><a href="#" routerLink="/register">Join Us</a></li>
+       </ul>
+     </div>
+   </div>
+ </nav>
 
-    <h1 class="landing-heading">Quality Healthcare at Your Fingertips</h1>
 
-    <p class="landing-description">
+ <div class="main">
+   <div class="left">
+     <p class="leftp">Compassionate care,exceptional results.</p>
+     <div class="para">
+       <p class="paaraa">Welcome to our revolutionary medical application, where convenience meets exceptional care. Finding a trusted
+         healthcare professional is essential for your well-being. With our user-friendly platform, you can effortlessly
+         connect with a network of trusted healthcare professionals.</p>
+     </div>
+     <div class="button">
+       <button class="buttons" routerLink="/login">Log in</button>
+     </div>
+   </div>
+   <div class="right">
+     <img src="/assets/iStock-485477990-removebg-preview.png" alt="" srcset="">
+   </div>
 
-      Welcome to our revolutionary medical application, where convenience meets exceptional care. Finding a trusted
-      healthcare professional is essential for your well-being. With our user-friendly platform, you can effortlessly
-      connect with a network of trusted healthcare professionals. Whether you're seeking a primary care physician,
-      specialist, or expert advice, our application puts the power of health in your hands.
+ </div>
 
-    </p>
+ <div class="subservices">
+   <div class="aboutright">
+     <img src="/assets/newsfeed-facebook-removebg-preview.png" alt="" srcset="">
+   </div>
+   <div class="aboutusleft">
+     <h3>About US</h3>
+     <p class="about">ProHealth is a team of experienced medical professional</p>
+     <div class="aboutpara">
+       <p class="aboutpara">At MedConnect, we empower you to take control of your healthcare journey. Our user-friendly platform allows you to effortlessly search for doctors based on their specialty, location, and availability. Say goodbye to long wait times and endless phone calls! With just a few clicks, you can book appointments at your convenience, saving you precious time and energy.</p>
+       <p>We understand that finding the right doctor is crucial for your well-being.</p>
+     </div>
+   </div>
+  
+ </div>
 
-  </div>
-  <button type="button" class="book-button" routerLink="/login">Book Apointment</button>
+ <div class="services">
+   <h2>OUR Services</h2>
+   <div class="cards">
+     <div class="card red">
+         <p class="tip">Find Doctors</p>
+         <p class="second-text"> Discover a wide range of experienced doctors across various specialties. Easily search, compare, and book appointments online.</p>
+     </div>
+     <div class="card blue">
+         <p class="tip">Book Doctors</p>
+         <p class="second-text"> Seamlessly schedule appointments with your chosen doctors through our user-friendly booking system.</p>
+     </div>
+     <div class="card green">
+         <p class="tip">Rate Doctors</p>
+         <p class="second-text">Share your valuable feedback and experiences by rating the doctors you have consulted. Help fellow users make informed decisions while also providing doctors with constructive insights to enhance their services. </p>
+     </div>
+ </div>
+ </div>
+
+ <footer class="footer">
+   <div class="container">
+     <div class="row">
+       <div class="footer-col">
+         <h4>company</h4>
+         <ul>
+           <li><a href="#">about us</a></li>
+           <li><a href="#">our services</a></li>
+           <li><a href="#">privacy policy</a></li>
+           <li><a href="#">affiliate program</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>get help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">shipping</a></li>
+           <li><a href="#">returns</a></li>
+           <li><a href="#">order status</a></li>
+           <li><a href="#">payment options</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>follow us</h4>
+         <div class="social-links">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+       </div>
+     </div>
+   </div>
+</footer>
+
 
 </div>
-<div class="services-container">
-  <app-services></app-services>
-</div>
-<app-aboutus></app-aboutus>
-<section id="contact">
-  <h2>Contact Us</h2>
-  <div class="contact-info">
-    <p><strong>Phone:</strong> (123) 456-7890</p>
-    <p><strong>Email:</strong> info@example.com</p>
-    <p><strong>Address:</strong> 123 Main Street, City, Country</p>
-    </div>
-  </section>
+ 
   
