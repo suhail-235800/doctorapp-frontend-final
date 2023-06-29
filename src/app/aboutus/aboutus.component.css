@@ -1,0 +1,131 @@
+
+.about {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("/assets/OIP.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+  }
+
+  .container {
+
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+  }
+
+ 
+
+  /* About Us section styles */
+
+  .about-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 80px 0;
+    text-align: left;
+
+  }
+
+ 
+
+  h1 {
+
+    font-size: 48px;
+    color: #26547c;
+    margin-bottom: 40px;
+
+  }
+
+ 
+
+  h2 {
+
+    font-size: 30px; /* Updated font size to match "Who Are We" heading */
+    color: #26547c;
+    margin-bottom: 20px;
+
+  }
+
+ 
+
+  h3 {
+
+    font-size: 30px;
+    color: #26547c;
+    margin-bottom: 15px;
+
+  }
+
+ 
+
+  p {
+
+    font-size: 18px;
+    line-height: 1.5;
+    color: #2a627e; /* Updated to a readable blue color */
+    margin-bottom: 30px;
+    font-weight: light; /* Increased boldness */
+
+  }
+
+ 
+
+  .container {
+
+    width: 80%;
+    margin: 0 auto;
+
+  }
+
+ 
+
+  /* Responsive styles */
+
+  @media (max-width: 768px) {
+
+    .container {
+      width: 90%;
+
+    }
+
+ 
+
+    h1 {
+
+      font-size: 50px;
+
+    }
+
+ 
+
+    h2 {
+
+      font-size: 20px;
+
+    }
+
+ 
+
+    h3 {
+
+      font-size: 20px;
+
+    }
+
+ 
+
+    p {
+
+      font-size: 16px;
+
+    }
+
+  }
+
+ 
+
+  

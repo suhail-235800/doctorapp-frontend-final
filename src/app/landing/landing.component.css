@@ -1,0 +1,194 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  img{
+    margin-left: -6rem;
+    height: 49px;
+    margin-top: 10px;
+  }
+  
+  
+  nav {
+  
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    padding: 0px 100px;
+    background:#161245;
+  
+  }
+  
+  
+  
+  nav .logo p {
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  cursor: pointer;
+  
+  }
+  
+  nav ul {
+  
+    float: right;
+  
+  }
+  
+  nav li {
+  
+    display: inline-block;
+    list-style: none;
+    padding-inline: 18px;
+    vertical-align: middle;
+  }
+
+  
+  
+  
+  nav li a {
+  
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0px 30px;
+    color: white;
+    text-transform: none;
+    text-decoration: none;
+     position: relative;
+    top: -5rem;
+  
+  }
+  nav li a:hover 
+  {
+    color: #ff8c69;
+    transition: all 0.4s ease 0%;
+  }
+  nav .joinus-button {
+    background-color: #1b8abd;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-top: -11rem;
+  }
+  
+  nav li:last-child {
+    margin-left: auto;
+  }
+
+  .content-items {
+  
+    text-align: left;
+    margin-top: 150px;
+    margin-left: 50px;
+    max-width: 800px;
+  
+  }
+  .landing-heading {
+  
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  
+  }
+  .landing-description {
+  
+    font-size: 24px;
+    line-height: 1.5;
+    color: #26547c; /* Matching blue color */
+  
+  }
+  
+  
+  .landingbody {
+    background-image: url('/assets/hero-bg.jpg');
+    background-size: cover;
+    height: 100vh;
+  
+  }
+
+
+
+@keyframes colorChange {
+
+    50% { color: #0a0a8c; } /* Blue */
+  
+    50% {color:#234f76;}
+  
+    20% {color:rgb(111, 178, 250);}
+  
+  }
+  .landing-description {
+  
+    font-size: 28px;
+    line-height: 1.5;
+    color: #26547c; /* Matching blue color */
+  
+  }
+  .services-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: -1rem;
+  }
+  
+  
+  #contact {
+     background-color: #161245; /* Same as the navbar background color */
+    color: white;
+    padding: 40px;
+    
+    /* Adjust the margin as per your preference */
+  
+  }
+  #contact h2 {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+    text-align: left; /* Align the heading to the left */
+    font-size: 28px;
+    margin-bottom: 20px;
+  
+  }
+  .contact-info {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: left; /* Align the text to the left */
+    margin-bottom: 30px;
+  
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+  }
+  .book-button {
+    background-color:#1b8abd;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 20rem;
+    cursor: pointer;
+  }
+
+  .book-button:hover {
+    background-color: #45a049;
+  }

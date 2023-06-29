@@ -1,0 +1,85 @@
+<link href="userbody.component.css" rel="stylesheet" />
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+<div class="homebody">
+  <div class="row align-items-start p-3">
+    <div class="col align-self-center">
+      <h4>List of doctors</h4>
+    </div>
+    <div class="col align-self-center">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search Doctors"
+          [(ngModel)]="searchDoctorName"
+        />
+        <select class="form-select" id="location" [(ngModel)]="selectedLocation">
+          <option value="default">Select Location</option>
+          <option value="ekm">ekm</option>
+          <option value="clt">clt</option>
+          <option value="tsr">tsr</option>
+        </select>
+        <select class="form-select" id="specialization" [(ngModel)]="selectedSpecialization">
+          <option value="default">Select specialization</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="dermatology">Dermatology</option>
+          <option value="orthopedics">Orthopedics</option>
+        </select>
+        <button class="btn btn-primary" type="button" (click)="searchDoctors()">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="doctorss" *ngFor="let doctor of doctors; let i = index">
+    <div class="row align-items-start add-doctor p-3" >
+      <div class="col align-self-center">
+        <div class="mb-3">
+          <label class="form-label">Doctor Name</label>
+          <input type="text" class="form-control"  readonly [(ngModel)]="doctor.doctorName"/>
+        </div><br>
+        <div class="daytime">
+        <p class="day">Mon-Fri</p><p class="time">9AM-6PM</p>
+      </div>
+      <div class="daytime">
+        <p class="day">Sat-Sun</p><p class="time">10AM-4PM</p>
+      </div>
+    </div>
+
+      <div class="col align-self-center">
+        <div class="mb-3">
+          <label class="form-label">Specialization</label>
+          <input type="text" class="form-control" readonly [(ngModel)]="doctor.doctorSpecialization"/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Location</label>
+          <input type="text" class="form-control" readonly [(ngModel)]="doctor.doctorLocation"/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Rating</label>
+          <input type="text" class="form-control" readonly [(ngModel)]="doctor.doctorRating"/>
+        </div>
+      </div>
+      <div class="col align-self-center">
+        <div class="mb-3">
+          <label class="form-label">Appoinment Date</label>
+          <input type="date" class="form-control" #appointmentDateInput>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Appoinment Time</label>
+          <input type="time" class="form-control" #appointmentTimeInput/>
+        </div>
+      </div>
+      <div class="col align-self-center">
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-success" (click)="bookAppointment(doctor,appointmentDateInput.value,appointmentTimeInput.value)">Book</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</div>

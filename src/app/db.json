@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "appointmentId": 0,
+      "userId": "",
+      "userName": "XC",
+      "doctorName": "WFG",
+      "details": "NIMISHA IS A",
+      "department": "",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

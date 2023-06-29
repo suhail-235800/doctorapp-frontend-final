@@ -1,0 +1,127 @@
+.background{
+    background-image: url("/assets/hero-bg.jpg");
+   
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+  }
+    .ee{
+      margin-top: 9rem;
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 20px;
+    }
+    img{
+      height: 97px;
+    }
+    
+    
+    .hhh {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-width: 600px;
+     
+    
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     
+    margin-left: auto;
+    margin-right: auto;
+      
+  
+    }
+    .logo{
+      text-align: center;
+      /* float: left; */
+      /* margin-right: 2px; */
+      font-size: larger;
+      height: 33px;
+    }
+  
+    .logoo {
+      float: left;
+      margin-right: -82px;
+      font-size: 64px;
+      height: 34px;
+      
+    }
+    
+    .button-group {
+      float: right;
+      display: flex;
+      margin-top: 10px;
+    }
+    
+    .user-button,
+    .admin-button {
+      padding: 10px;
+      margin-left: 5px;
+      border-radius: 3px;
+      background-color: #022839;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .user-button:hover,
+    .admin-button:hover {
+      background-color: #0056b3;
+    }
+    
+    .admin-button {
+      margin-left: 10px;
+    }
+    
+    .rounded-circle {
+      /* Define the desired styles for the profile circle */
+    }
+    
+    .form-fields,
+    .login-button,
+    .register-link {
+      margin-top: 20px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    
+    button.login-button {
+      width: auto;
+      padding: 10px 20px;
+      border-radius: 3px;
+      background-color: #4bbdf1;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    
+    button.login-button:hover {
+      background-color: #0056b3;
+    }
+    
+    .register-link {
+      margin-top: 10px;
+      text-align: center;
+    }
+    
+    .register-link a {
+      color: #061064;
+      transition: color 0.3s ease;
+    }
+    
+    .register-link a:hover {
+      color: red;
+    }
+    

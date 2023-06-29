@@ -1,0 +1,77 @@
+.homebody {
+    position: absolute;
+    left: 20rem;
+    top: 6rem;
+    width: 69rem;
+    margin-bottom: 0%;
+  }
+  
+  .btn {
+    min-width: 150px;
+    height: 40px;
+    border-radius: 20px;
+  }
+  
+  .Search-btn {
+    color: rgb(255, 255, 255);
+    background-color: rgb(68, 77, 156);
+  }
+  
+  .edit-btn1,
+  .edit-btn2,
+  .del-btn1,
+  .del-btn2,
+  .add-btn {
+    width: 30%;
+    height: 40px;
+    border-radius: 20px;
+  }
+  
+  .add-btn {
+    margin-right: 5px;
+  }
+  
+  .ed-del .d-flex.justify-content-center {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ed-del .d-flex.justify-content-center .btn {
+    margin-bottom: 5px;
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .homebody {
+      position: static;
+      width: auto;
+      margin: 0 auto;
+      padding: 10px;
+      left: 0;
+      top: 0;
+    }
+  
+    .btn,
+    .add-btn,
+    .edit-btn1,
+    .edit-btn2,
+    .del-btn1,
+    .del-btn2 {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .add-btn {
+      margin-right: 0;
+    }
+  
+    .ed-del .d-flex.justify-content-center {
+      margin-top: 20px;
+    }
+  }
+  
+  .doctorss{
+    border: 1px solid grey;
+    box-shadow: 0px 6px 34px -3px rgba(0, 0, 0, 0.5);
+}

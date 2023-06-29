@@ -1,0 +1,35 @@
+<div class="background">
+    <div class="hhh">
+      <div class="ee">
+        <div class="line">
+          <div class="logo">
+            <img class="logoo" src="/assets/logoname.png" alt="App Logo">
+          </div>
+          <div class="button-group">
+            <button class="user-button">User</button>
+            <button class="admin-button">Admin</button>
+          </div>
+        </div>
+  
+        <div class="rounded-circle" id="profile">
+          <img src="/assets/profile.jpg" />
+        </div>
+  
+        <div class="line3">
+          <div class="usernam">
+            <input type="text" placeholder="Username" [(ngModel)]="email" />
+          </div>
+          <br />
+          <div class="pass-w">
+            <input type="password" placeholder="Password" [(ngModel)]="password" />
+          </div>
+        </div>
+        <div class="line4">
+          <button class="login-button" (click)="login()">Login</button>
+        </div>
+        <div class="line5">
+          <p class="register-link">New here? <a href="#" routerLink="/register">Create new Account</a></p>
+        </div>
+      </div>
+    </div>
+  </div>

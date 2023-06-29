@@ -1,0 +1,56 @@
+<link href="myratings.component.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<div class="rate">
+    <app-navbar></app-navbar>
+    <div class="ratebody">
+        <app-sidebar></app-sidebar>
+        <div class="homebody">
+            <div class="row align-items-start p-3">
+                <div class="col align-self-center">
+                    <h4>My Ratings</h4>
+                </div>
+            </div>
+
+            <div class="doctors">
+                <div class="row align-items-start add-doctor p-3"
+                    *ngFor="let rating of ratings; let i = index">
+                    <div class="col align-self-center">
+                        <div class="mb-3">
+                            <label class="form-label">Doctor Name</label>
+                            <input type="text" class="form-control" readonly [(ngModel)]="rating.doctorName" />
+                        </div>
+                    </div>
+                    <div class="col align-self-center">
+                        <div class="mb-3">
+                            <label class="form-label">Appointment Date</label>
+                            <input type="text" class="form-control" readonly
+                                [(ngModel)]="rating.appointmentDate">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Appointment Time</label>
+                            <input type="text" class="form-control" readonly [(ngModel)]="rating.appointmentTime">
+                        </div>
+                    </div>
+                    <div class="col align-self-center">
+                        <div class="mb-3">
+                            <label class="form-label">Rating</label>
+                            <div class="stars">
+                                <ng-container *ngFor="let star of getStars(rating.rating)">
+                                    &#9733; <!-- Unicode character for a filled star -->
+                                  </ng-container>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="script.js"></script>
+
+        </div>
+    </div>
+</div>
