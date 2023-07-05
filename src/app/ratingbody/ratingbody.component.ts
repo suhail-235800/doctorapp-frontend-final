@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertConfig } from 'ngx-bootstrap/alert';
 import { Appointment } from '../domain/Appointment';
 import { Rating } from '../domain/Rating';
 import { RatingRequest } from '../domain/RatingRequest';
@@ -17,13 +19,17 @@ export class RatingbodyComponent {
   appointment:Appointment = new Appointment();
   searchDoctorName: string='';
 
+  successMessage: string='';
+  errorMessage: string='';
+
   ratings:any;
   rating:Rating = new Rating();
   ratingrequest:RatingRequest = new RatingRequest();
   reviewText:string='';
   ratedAppointments: boolean[] = [];
 
-  constructor(private service: ServiceService) {
+  constructor(private service: ServiceService,private alertConfig: AlertConfig,private router: Router) {
+    this.alertConfig.dismissible = true;
    }
 
   ngOnInit(): void {
@@ -40,14 +46,9 @@ export class RatingbodyComponent {
       this.appointments = response;
     },
     error => {
-      if (error.status === 404) {
-        alert('No Doctors Found');
-        
-        window.location.reload();
-        
-      } else {
-        // Handle other error cases here
-      }
+      console.error(error);
+      this.successMessage = ''; 
+      this.errorMessage = 'No Doctors found'; 
     });
   }
   
@@ -85,11 +86,14 @@ export class RatingbodyComponent {
     this.service.addRating(this.ratingrequest)
     .subscribe(
       response => {
-        // Handle the API response
-        console.log('Rating added Succesfully!');  
+        this.router.navigateByUrl('/myratings').then(() => {
+          location.reload();
+        });
       },
+
       error => {
-        alert("already rated")
+        this.successMessage = ''; 
+        this.errorMessage = 'Already rated';
       }
     );
   }

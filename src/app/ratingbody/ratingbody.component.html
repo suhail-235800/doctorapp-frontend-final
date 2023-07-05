@@ -14,7 +14,10 @@
             </div>
         </div>
     </div>
-
+    <!-- <div class="alerts">
+        <alert *ngIf="successMessage" type="success">{{ successMessage }}</alert>
+        <alert *ngIf="errorMessage" type="danger">{{ errorMessage }}</alert>
+    </div>  -->
     <div class="doctors">
         <div class="row align-items-start add-doctor p-3" *ngFor="let appointment of appointments; let i = index">
             <div class="col align-self-center">

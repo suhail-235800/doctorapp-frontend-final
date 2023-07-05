@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertConfig } from 'ngx-bootstrap/alert';
 import { Appointment } from '../domain/Appointment';
 import { AppointmentRequest } from '../domain/AppointmentRequest';
 import { Doctor } from '../domain/Doctor';
@@ -31,7 +33,12 @@ export class UserbodyComponent {
   selectedDate: string='';
   selectedTime: string=''; // Declare 'posts' property
 
-  constructor(private service: ServiceService) { }
+  successMessage: string='';
+  errorMessage: string='';
+
+  constructor(private service: ServiceService,private alertConfig: AlertConfig,private router: Router) {
+    this.alertConfig.dismissible = true;
+   }
 
   ngOnInit(): void {
     this.service.getDoctors().subscribe(response => {
@@ -128,8 +135,8 @@ getDoctorsByName(name: string) {
   },
   error => {
     if (error.status === 404) {
-      alert('No Doctors Found');
-      window.location.reload();
+      this.successMessage = ''; // Clear success message
+      this.errorMessage = 'Doctors not found'; 
     } else {
       // Handle other error cases here
     }
@@ -154,8 +161,8 @@ getDoctorsByLocation(location: string) {
   },
   error => {
     if (error.status === 404) {
-      alert('No Doctors Found');
-      window.location.reload();
+      this.successMessage = ''; // Clear success message
+      this.errorMessage = 'Doctors not found'; 
     } else {
       // Handle other error cases here
     }
@@ -182,8 +189,8 @@ getDoctorsBySpecialization(specialization: string) {
   ,
   error => {
     if (error.status === 404) {
-      alert('No Doctors Found');
-      window.location.reload();
+      this.successMessage = ''; // Clear success message
+      this.errorMessage = 'Doctors not found'; 
     } else {
       // Handle other error cases here
     }
@@ -209,8 +216,8 @@ getDoctorsByNameandLoc(doctorname: string,location:string) {
   ,
   error => {
     if (error.status === 404) {
-      alert('No Doctors Found');
-      window.location.reload();
+      this.successMessage = ''; // Clear success message
+      this.errorMessage = 'Doctors not found'; 
     } else {
       // Handle other error cases here
     }
@@ -237,8 +244,8 @@ getDoctorsByNameandSpec(doctorname: string,specialization:string) {
   
   error => {
     if (error.status === 404) {
-      alert('No Doctors Found');
-      window.location.reload();
+      this.successMessage = ''; // Clear success message
+      this.errorMessage = 'Doctors not found'; 
     } else {
       // Handle other error cases here
     }
@@ -263,8 +270,8 @@ getDoctorsByLocandSpec(location:string,specialization: string){
   },
   error => {
     if (error.status === 404) {
-      alert('No Doctors Found');
-      window.location.reload();
+      this.successMessage = ''; // Clear success message
+      this.errorMessage = 'Doctors not found'; 
     } else {
       // Handle other error cases here
     }
@@ -289,8 +296,8 @@ getDoctorsByNameLocSpec(doctorname:string,location:string,specialization: string
   },
   error => {
     if (error.status === 404) {
-      alert('No Doctors Found');
-      window.location.reload();
+      this.successMessage = ''; // Clear success message
+      this.errorMessage = 'Doctors not found';
     } else {
       // Handle other error cases here
     }
@@ -332,10 +339,17 @@ bookAppointment(doctor:Doctor,appointmentDate:string,appointmentTime:string){
   .subscribe(
     response => {
       // Handle the API response
-      console.log('Appointment booked successfully!');
+      this.successMessage = 'Appointment booked Successfully'; // Set success message
+      this.errorMessage = '';
+      console.log('Appointment booked Successfully');
+      
+      this.router.navigateByUrl('/myappointment');
+      
+      console.log('Appointment booked Successfully');
     },
     error => {
-      console.error('Failed to book the appointment:', error);
+      this.successMessage = '';
+      this.errorMessage = 'Already an appointment is present for the doctor';
     }
   );
 

@@ -11,20 +11,21 @@ import { UserhomeComponent } from './userhome/userhome.component';
 import { ServicesComponent } from './services/services.component';
 import { MyappointmentsComponent } from './myappointments/myappointments.component';
 import { MyratingsComponent } from './myratings/myratings.component';
+import { RoleGuard } from './role.guard';
 
 const routes: Routes = [
   {path:'',redirectTo:'/landing',pathMatch:'full'},
-  { path: 'userhome', component: UserhomeComponent },
-  { path: 'rating', component: RatingComponent },
+  { path: 'userhome', component: UserhomeComponent, canActivate: [RoleGuard], data: { roles: ['USER'] } },
+  { path: 'rating', component: RatingComponent, canActivate: [RoleGuard], data: { roles: ['USER'] } },
   { path: 'aboutus', component: AboutusComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'login', component: LoginComponent },
   { path: 'landing', component: LandingComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'adminhome', component: AdminhomrComponent },
+  { path: 'adminhome', component: AdminhomrComponent, canActivate: [RoleGuard], data: { roles: ['ADMIN'] } },
   { path: 'ratereview', component: RatereviwComponent },
-  { path: 'myappointment', component: MyappointmentsComponent},
-  { path: 'myratings', component: MyratingsComponent}
+  { path: 'myappointment', component: MyappointmentsComponent, canActivate: [RoleGuard], data: { roles: ['USER'] }},
+  { path: 'myratings', component: MyratingsComponent, canActivate: [RoleGuard], data: { roles: ['USER'] }}
 ];
 
 @NgModule({

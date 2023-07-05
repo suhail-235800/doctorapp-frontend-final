@@ -57,12 +57,13 @@ export class AdminbodyComponent {
       this.newDoctor.doctorLocation = this.newDoctor.doctorLocation;
       this.newDoctor.doctorRating = this.newDoctor.doctorRating;
 
-      this.service.addDoctor(this.newDoctor).subscribe(data => {
+
+      this.service.addDoctorgateway(this.newDoctor).subscribe(data => {
         console.log(data);
         doctorForm.resetForm();
         this.successMessage = 'Doctor added successfully'; // Set success message
         this.errorMessage = '';
-        window.location.reload();
+
       },
       error => {
         console.error(error);
@@ -70,8 +71,8 @@ export class AdminbodyComponent {
         this.errorMessage = 'Failed to add doctor'; // Set error message
       }
       );
-
     }
+    
   }
   
 
@@ -83,12 +84,17 @@ export class AdminbodyComponent {
   
     this.service.updateDoctor(doctor.doctorId, doctor).subscribe(data => {
       console.log(data);
-      alert("Doctor updated");
-    });
-  
-    
+      this.successMessage = 'Doctor updated successfully'; // Set success message
+      this.errorMessage = '';
+    },
+    error => {
+      console.error(error);
+      this.successMessage = ''; // Clear success message
+      this.errorMessage = 'Failed to update doctor'; // Set error message
+    }
+    );
+
     this.isEditing[doctorIndex] = false;
-    window.location.reload();
   }
   
 
@@ -97,9 +103,15 @@ export class AdminbodyComponent {
     const deletedDoctor = this.doctors[index];
   
     this.service.deleteDoctor(deletedDoctor.doctorId).subscribe(() => {
-      console.log("Doctor deleted");
       this.doctors.splice(index, 1);
-      window.location.reload();
-    });
+      this.successMessage = 'Doctor deleted successfully'; // Set success message
+      this.errorMessage = '';
+    },
+    error => {
+      console.error(error);
+      this.successMessage = ''; // Clear success message
+      this.errorMessage = 'Failed to delete doctor'; // Set error message
+    }
+    );
   }
 }
